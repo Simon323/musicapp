@@ -24,7 +24,33 @@ function Hero(props) {
         </div>
       </div>
       {/* right side */}
-      <div className="images">Images</div>
+      <div className="images relative w-[50%]">
+        <img
+          src={require("../img/backgraphics.png")}
+          alt=""
+          className="absolute top-[-8rem] left-[19rem]"
+        />
+        <img
+          src={require("../img/p 1.png")}
+          alt=""
+          className="absolute top-[-15rem] h-[34rem] left-[13rem]"
+        />
+        <img
+          src={require("../img/p 2.png")}
+          alt=""
+          className="absolute left-[235px] top-[94px] w-[175px]"
+        />
+        <img
+          src={require("../img/p 3.png")}
+          alt=""
+          className="absolute w-[5rem] left-[13rem] top-[12rem]"
+        />
+        <img
+          src={require("../img/p 4.png")}
+          alt=""
+          className="absolute w-[5rem] left-[12.5rem] top-[12rem]"
+        />
+      </div>
     </div>
   );
 }
