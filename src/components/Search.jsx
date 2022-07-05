@@ -4,7 +4,7 @@ function Search() {
   return (
     <div className="search relative h-[65rem] px-[5rem] bg-[#081730] pt-[18rem] pb-[10rem] mt-[-15rem] z-[1] flex items-center justify-between rounded-b-[5rem]">
       {/* left side */}
-      <div className="left">
+      <div className="left flex-1">
         <img
           src={require("../img/backgraphics.png")}
           alt=""
@@ -33,7 +33,19 @@ function Search() {
       </div>
 
       {/* right side */}
-      <div className="right"></div>
+      <div className="right flex items-start flex-col justify-start flex-1 h-[100%] pt-[9rem]">
+        {/* Search */}
+        <div className="searchbar flex justify-start w-[100%]">
+          <input type="text" placeholder="Enter the keyword or URL" />
+          <div className="searchIcon">
+            <img
+              src={require("../img/search.png")}
+              alt=""
+              className="w-[1.5rem]"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
