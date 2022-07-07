@@ -1,4 +1,5 @@
 import React from "react";
+import MusicPlayer from "./MusicPlayer";
 
 function Search() {
   return (
@@ -70,6 +71,7 @@ function Search() {
           </span>
         </div>
         {/* music player */}
+        <MusicPlayer />
       </div>
     </div>
   );
