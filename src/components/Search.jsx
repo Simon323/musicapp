@@ -9,7 +9,7 @@ function Search() {
         <img
           src={require("../img/backgraphics.png")}
           alt=""
-          className="absolute top-[22rem] left-[-60rem]"
+          className="absolute top-[16rem] left-[-60rem]"
         />
         <img
           src={require("../img/d1.png")}
