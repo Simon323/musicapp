@@ -4,7 +4,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 
 function Hero(props) {
-  const [elementIsVisibe, setElementIsVisible] = useState(false);
+  const [elementIsVisible, setElementIsVisible] = useState(false);
   const bg = {
     true: {
       left: "7rem",
@@ -66,7 +66,7 @@ function Hero(props) {
         <div className="images relative w-[50%]">
           <motion.img
             variants={bg}
-            animate={`${elementIsVisibe}`}
+            animate={`${elementIsVisible}`}
             transition={{ duration: 1, type: "ease-out" }}
             src={require("../img/backgraphics.png")}
             alt=""
@@ -80,7 +80,7 @@ function Hero(props) {
           />
           <motion.img
             variants={musicPlayer}
-            animate={`${elementIsVisibe}`}
+            animate={`${elementIsVisible}`}
             transition={{ duration: 1, type: "ease-out" }}
             mg
             src={require("../img/p 2.png")}
@@ -89,7 +89,7 @@ function Hero(props) {
           />
           <motion.img
             variants={rect}
-            animate={`${elementIsVisibe}`}
+            animate={`${elementIsVisible}`}
             transition={{ duration: 1, type: "ease-out" }}
             src={require("../img/p 3.png")}
             alt=""
@@ -97,7 +97,7 @@ function Hero(props) {
           />
           <motion.img
             variants={heart}
-            animate={`${elementIsVisibe}`}
+            animate={`${elementIsVisible}`}
             transition={{ duration: 1, type: "ease-out" }}
             src={require("../img/p 4.png")}
             alt=""

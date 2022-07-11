@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import MusicPlayer from "./MusicPlayer";
+import VisibilitySensor from "react-visibility-sensor";
+import { motion } from "framer-motion";
 
 function Search() {
+  const [elementIsVisible, setElementIsVisible] = useState(false);
+  const redimg = {
+    true: {
+      left: "18rem",
+    },
+    false: {
+      left: "16rem",
+    },
+  };
+  const musicimg = {
+    true: {
+      left: "2rem",
+    },
+    false: {
+      left: "6rem",
+    },
+  };
   return (
     <div className="search relative h-[65rem] px-[5rem] bg-[#081730] pt-[18rem] pb-[10rem] mt-[-15rem] z-[1] flex items-center justify-between rounded-b-[5rem]">
       {/* left side */}
@@ -11,22 +30,34 @@ function Search() {
           alt=""
           className="absolute top-[16rem] left-[-60rem]"
         />
-        <img
+        <motion.img
           src={require("../img/d1.png")}
           alt=""
           className="w-[16rem] top-[26rem] absolute"
         />
-        <img
+        <motion.img
           src={require("../img/d2.png")}
           alt=""
           className="w-[9rem] absolute top-[32.7rem] left-[7rem]]"
         />
-        <img
+        <motion.img
+          variants={redimg}
+          animate={`${elementIsVisible}`}
+          transition={{
+            duration: 1.2,
+            type: "ease-out",
+          }}
           src={require("../img/d3.png")}
           alt=""
           className="w-[9rem] top-[33rem] left-[17rem] absolute"
         />
-        <img
+        <motion.img
+          variants={musicimg}
+          animate={`${elementIsVisible}`}
+          transition={{
+            duration: 1,
+            type: "ease-out",
+          }}
           src={require("../img/d4.png")}
           alt=""
           className="w-[17rem] top-[50rem] left-[2rem] absolute"
@@ -71,7 +102,11 @@ function Search() {
           </span>
         </div>
         {/* music player */}
-        <MusicPlayer />
+        <VisibilitySensor
+          onChange={(isVisible) => setElementIsVisible(isVisible)}
+        >
+          <MusicPlayer />
+        </VisibilitySensor>
       </div>
     </div>
   );
